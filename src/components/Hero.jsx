@@ -33,8 +33,8 @@ export default function Hero() {
       </motion.div>
 
       <motion.aside
-        initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="profile-card glass" aria-label="Profile summary">
         <img src="/Images/Profile.JPG" alt="Abdullah Mushtaq" />
