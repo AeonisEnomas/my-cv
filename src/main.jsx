@@ -9,6 +9,7 @@ import {
   Download,
   Github,
   GraduationCap,
+  Linkedin,
   Mail,
   MapPin,
   Menu,
@@ -29,6 +30,7 @@ const profile = {
   email: 'abdullahmushtaq445@gmail.com',
   phone: '+92 302 1047124',
   github: 'https://github.com/AevitusOmegus',
+  linkedin: 'https://www.linkedin.com/in/abdullah-mushtaq-605554378/',
 };
 
 const navItems = [
@@ -65,14 +67,23 @@ const skillGroups = [
 
 const projects = [
   {
-    name: 'Classroom Management System',
-    stack: 'React.js, Express.js, T-SQL',
-    summary:
-      'Role-based web platform for managing classroom workflows, backed by REST APIs and a relational database design.',
+    name: 'SENTI-MIND',
+    stack: 'React, FastAPI, Supabase, ML/NLP',
+    summary: 'An intelligent AI-powered mental health companion analyzing text to detect emotional states and clinical risks.',
     impact: [
-      'Built authentication-aware flows for multiple user roles.',
-      'Structured backend APIs for clean communication between React and Node.js.',
-      'Designed SQL schema and queries for reliable classroom data retrieval.',
+      'Built a full-stack mental health tracking system using React and FastAPI.',
+      'Trained a custom LinearSVC model with TF-IDF for clinical risk classification.',
+      'Integrated HuggingFace models for real-time emotion detection and OpenRouter for empathetic AI responses.',
+    ],
+  },
+  {
+    name: 'Coding-Classroom',
+    stack: 'React, Tailwind, Supabase, Docker',
+    summary: 'A highly interactive Learning Management System frontend seamlessly integrated with a live coding IDE.',
+    impact: [
+      'Designed a pristine, premium glass/minimalist UI using Tailwind CSS.',
+      'Integrated Monaco Editor for a dedicated execution environment supporting Python and JS.',
+      'Built a dual-client architecture for teachers and students with dynamic dashboard routing.',
     ],
   },
   {
@@ -267,6 +278,9 @@ function App() {
               <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub profile">
                 <Github size={17} />
               </a>
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+                <Linkedin size={17} />
+              </a>
             </div>
           </motion.aside>
         </section>
@@ -420,6 +434,10 @@ function App() {
             <motion.a variants={zoomIn} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} href={profile.github} target="_blank" rel="noreferrer" className="glass">
               <Github size={22} />
               <span>github.com/AevitusOmegus</span>
+            </motion.a>
+            <motion.a variants={zoomIn} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} href={profile.linkedin} target="_blank" rel="noreferrer" className="glass">
+              <Linkedin size={22} />
+              <span>LinkedIn Profile</span>
             </motion.a>
             <motion.div variants={zoomIn} whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="glass">
               <MapPin size={22} />
