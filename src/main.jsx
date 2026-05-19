@@ -42,26 +42,26 @@ const navItems = [
 ];
 
 const highlights = [
-  'Full-stack development with React, Node.js, Express, and SQL-backed APIs.',
-  'Strong C++ and OOP foundation through desktop, game, and systems projects.',
-  'Comfortable turning academic CS fundamentals into practical software.',
+  'Full-Stack Architecture: Deployed scalable platforms utilizing React, FastAPI, Node.js, and Supabase.',
+  'Advanced Integrations: Bridged robust backends with AI/ML pipelines (NLP) and Dockerized environments.',
+  'Engineering Foundation: Solid command of C++, Object-Oriented Design, and algorithmic problem-solving.',
 ];
 
 const skillGroups = [
   {
-    title: 'Application Development',
+    title: 'Frontend Development',
     icon: Code2,
-    items: ['React.js', 'JavaScript', 'Node.js', 'Express.js', 'C# WinForms'],
+    items: ['React', 'JavaScript / TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion'],
   },
   {
-    title: 'Systems & Programming',
+    title: 'Backend & Cloud',
     icon: Server,
-    items: ['C++', 'OOP', 'Data Structures', 'Algorithms', 'Assembly'],
+    items: ['Node.js', 'FastAPI', 'Express.js', 'Supabase', 'Docker'],
   },
   {
-    title: 'Data & Tooling',
+    title: 'Core & Data',
     icon: Database,
-    items: ['T-SQL', 'Relational Design', 'REST APIs', 'Git', 'Raylib / SFML'],
+    items: ['Python', 'C++', 'SQL (PostgreSQL, T-SQL)', 'Machine Learning (NLP)', 'Git'],
   },
 ];
 
@@ -232,7 +232,7 @@ function App() {
             <motion.p variants={fadeInUp} className="eyebrow">Computer Science Undergraduate - FAST-NUCES Lahore</motion.p>
             <motion.h1 variants={fadeInUp}>{profile.name}</motion.h1>
             <motion.p variants={fadeInUp} className="hero-lede">
-              Software developer focused on building reliable full-stack applications and strengthening the CS fundamentals behind them.
+              Software developer specializing in full-stack architecture, modern web technologies, and bridging intelligent systems with scalable backends.
             </motion.p>
             <motion.div variants={fadeInUp} className="hero-actions">
               <motion.a 
@@ -288,7 +288,7 @@ function App() {
           </div>
           <motion.div variants={zoomIn} className="summary-panel glass">
             <p>
-              I am a Computer Science undergraduate at FAST-NUCES Lahore with hands-on experience across web, desktop, game, and low-level programming projects. My strongest areas are React, Node.js, C++, SQL-backed applications, and writing software with clear structure.
+              A detail-oriented Software Developer and Computer Science undergraduate at FAST-NUCES Lahore, specializing in modern web technologies and full-stack architecture. Experienced in designing scalable, data-driven applications utilizing React, Node.js, and Python frameworks. I have a demonstrated ability to integrate advanced features—such as NLP pipelines and secure execution environments—into production-ready platforms.
             </p>
             <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="highlight-grid">
               {highlights.map((item, index) => (
