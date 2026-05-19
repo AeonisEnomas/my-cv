@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abdullah Mushtaq - CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #3b82f6;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --text-light: #94a3b8;
+      --white: #ffffff;
+      --bg-gray: #f8fafc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      font-size: 11px;
+      background: #fff;
+      width: 210mm;
+      height: 297mm;
+      display: flex;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      width: 32%;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .sidebar h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 6px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 10.5px;
+      color: #e2e8f0;
+    }
+
+    .contact-item svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .skill-group {
+      margin-bottom: 16px;
+    }
+
+    .skill-group h3 {
+      font-size: 12px;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-pill {
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 10px;
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .education-item {
+      margin-bottom: 16px;
+    }
+
+    .education-item h3 {
+      font-size: 12px;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 2px;
+    }
+
+    .education-item .school {
+      font-size: 10.5px;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+
+    .education-item .date {
+      font-size: 10px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Main Content */
+    .main-content {
+      width: 68%;
+      padding: 45px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-name {
+      margin-bottom: 30px;
+    }
+
+    .header-name h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .header-name .title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .main-content h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      margin-top: 24px;
+      border-bottom: 2px solid var(--bg-gray);
+      padding-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-text {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .summary-bullets {
+      margin-left: 18px;
+      color: var(--text-muted);
+      font-size: 11.5px;
+    }
+
+    .summary-bullets li {
+      margin-bottom: 6px;
+    }
+
+    .project-item {
+      margin-bottom: 20px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .project-stack {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .project-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .project-bullets {
+      margin-left: 18px;
+      color: var(--text-muted);
+    }
+
+    .project-bullets li {
+      margin-bottom: 4px;
+    }
+    
+    .project-bullets li::marker {
+      color: var(--accent);
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="sidebar">
+    <div class="contact-section">
+      <h2>Contact</h2>
+      <div class="contact-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        +92 302 1047124
+      </div>
+      <div class="contact-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        abdullahmushtaq445@gmail.com
+      </div>
+      <div class="contact-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+        github.com/AevitusOmegus
+      </div>
+      <div class="contact-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Lahore, Pakistan
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>Application Dev</h3>
+        <div class="skill-list">
+          <span class="skill-pill">React.js</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">Express.js</span>
+          <span class="skill-pill">C# WinForms</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Systems & Prog</h3>
+        <div class="skill-list">
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">OOP</span>
+          <span class="skill-pill">Data Structures</span>
+          <span class="skill-pill">Algorithms</span>
+          <span class="skill-pill">Assembly</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Data & Tooling</h3>
+        <div class="skill-list">
+          <span class="skill-pill">T-SQL</span>
+          <span class="skill-pill">Relational Design</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Raylib / SFML</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="education-section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>BS Computer Science</h3>
+        <div class="school">FAST-NUCES Lahore</div>
+        <div class="date">2023 - 2027</div>
+      </div>
+      <div class="education-item">
+        <h3>Intermediate Pre-Medical</h3>
+        <div class="school">Shalimar College Lahore</div>
+        <div class="date">2020 - 2022</div>
+      </div>
+      <div class="education-item">
+        <h3>Matriculation</h3>
+        <div class="school">Govt High School for Boys</div>
+        <div class="date">2018 - 2020</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="header-name">
+      <h1>Abdullah Mushtaq</h1>
+      <div class="title">Software Developer</div>
+    </div>
+
+    <h2>Profile Summary</h2>
+    <p class="summary-text">Computer Science undergraduate at FAST-NUCES Lahore with hands-on experience across web, desktop, game, and low-level programming projects. Focused on building reliable full-stack applications and strengthening CS fundamentals.</p>
+    <ul class="summary-bullets">
+      <li>Full-stack development with React, Node.js, Express, and SQL-backed APIs.</li>
+      <li>Strong C++ and OOP foundation through desktop, game, and systems projects.</li>
+      <li>Comfortable turning academic CS fundamentals into practical software.</li>
+    </ul>
+
+    <h2>Selected Projects</h2>
+    
+    <div class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">Classroom Management System</h3>
+        <span class="project-stack">React, Express, T-SQL</span>
+      </div>
+      <div class="project-desc">Role-based web platform for managing classroom workflows.</div>
+      <ul class="project-bullets">
+        <li>Built authentication-aware flows for multiple user roles.</li>
+        <li>Structured backend APIs for clean communication between React and Node.js.</li>
+        <li>Designed SQL schema and queries for reliable classroom data retrieval.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">Chippa Motors</h3>
+        <span class="project-stack">C#, WinForms, 3-Layer Arch</span>
+      </div>
+      <div class="project-desc">Desktop business application organized around clear separation of concerns.</div>
+      <ul class="project-bullets">
+        <li>Separated responsibilities to make the application easier to maintain.</li>
+        <li>Implemented database operations behind a clear business-logic layer.</li>
+        <li>Designed a practical interface for repeated operational use.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">2D Dungeon Crawler - Penance</h3>
+        <span class="project-stack">C++, Raylib</span>
+      </div>
+      <div class="project-desc">Real-time 2D game project focused on rendering and scalable game state handling.</div>
+      <ul class="project-bullets">
+        <li>Implemented player movement, collision detection, and entity interactions.</li>
+        <li>Used Raylib to manage rendering and responsive gameplay loops.</li>
+        <li>Practiced modular C++ architecture for gameplay systems.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">1v1 Chess Game</h3>
+        <span class="project-stack">C++, SFML</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Modeled pieces with reusable OOP patterns.</li>
+        <li>Implemented move rules and board interaction logic.</li>
+        <li>Built a graphical interface using SFML.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">Maze Rush</h3>
+        <span class="project-stack">Assembly Language</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Low-level game demonstrating direct control over memory, registers, and flow.</li>
+        <li>Applied CPU architecture concepts in an interactive project.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
