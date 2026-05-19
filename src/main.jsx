@@ -25,7 +25,7 @@ const cvUrl = '/Abdullah-Mushtaq-CV.pdf';
 
 const profile = {
   name: 'Abdullah Mushtaq',
-  title: 'Software Developer',
+  title: 'Computer Science Undergraduate',
   location: 'Lahore, Pakistan',
   email: 'abdullahmushtaq445@gmail.com',
   phone: '+92 302 1047124',
@@ -219,7 +219,7 @@ function App() {
             <motion.p variants={fadeInUp} className="eyebrow">Computer Science Undergraduate - FAST-NUCES Lahore</motion.p>
             <motion.h1 variants={fadeInUp}>{profile.name}</motion.h1>
             <motion.p variants={fadeInUp} className="hero-lede">
-              Software developer specializing in full-stack architecture, modern web technologies, and bridging intelligent systems with scalable backends.
+              Computer Science undergraduate specializing in full-stack architecture, modern web technologies, and bridging intelligent systems with scalable backends.
             </motion.p>
             <motion.div variants={fadeInUp} className="hero-actions">
               <motion.a
@@ -275,7 +275,7 @@ function App() {
           </div>
           <motion.div variants={zoomIn} className="summary-panel glass">
             <p>
-              A detail-oriented Software Developer and Computer Science undergraduate at FAST-NUCES Lahore, specializing in modern web technologies and full-stack architecture. Experienced in designing scalable, data-driven applications utilizing React, Node.js, and Python frameworks. I have a demonstrated ability to integrate advanced features—such as NLP pipelines and secure execution environments—into production-ready platforms.
+              A detail-oriented Computer Science undergraduate at FAST-NUCES Lahore, specializing in modern web technologies and full-stack architecture. Experienced in designing scalable, data-driven applications utilizing React, Node.js, and Python frameworks. I have a demonstrated ability to integrate advanced features—such as NLP pipelines and secure execution environments—into functional projects.
             </p>
             <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="highlight-grid">
               {highlights.map((item, index) => (
@@ -376,7 +376,7 @@ function App() {
               className="glass">
               <span>2023 - 2027</span>
               <h3>Bachelor of Computer Science</h3>
-              <p>FAST-NUCES Lahore - Focused on software engineering, data structures, algorithms, databases, and systems fundamentals.</p>
+              <p>FAST-NUCES Lahore</p>
             </motion.article>
             <motion.article
               variants={fadeInUp}
