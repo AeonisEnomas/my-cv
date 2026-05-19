@@ -51,7 +51,7 @@ const skillGroups = [
   {
     title: 'Frontend Development',
     icon: Code2,
-    items: ['React', 'JavaScript / TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion'],
+    items: ['React', 'JavaScript / TypeScript', 'Tailwind CSS', 'Vite'],
   },
   {
     title: 'Backend & Cloud',
@@ -67,58 +67,45 @@ const skillGroups = [
 
 const projects = [
   {
-    name: 'SENTI-MIND',
+    name: 'SENTI-MIND (Solo)',
     stack: 'React, FastAPI, Supabase, ML/NLP',
     link: 'https://senti-mind-mocha.vercel.app',
-    summary: 'An intelligent AI-powered mental health companion analyzing text to detect emotional states and clinical risks.',
+    summary: 'An AI-powered mental health companion analyzing text to detect emotional states and clinical risks.',
     impact: [
-      'Built a full-stack mental health tracking system using React and FastAPI.',
-      'Trained a custom LinearSVC model with TF-IDF for clinical risk classification.',
-      'Integrated HuggingFace models for real-time emotion detection and OpenRouter for empathetic AI responses.',
+      'Developed a full-stack mental health tracking dashboard using React, featuring real-time analytics and user progress tracking.',
+      'Trained and deployed a custom LinearSVC machine learning model utilizing TF-IDF for accurate clinical risk classification.',
+      'Integrated HuggingFace NLP models for dynamic emotion detection and utilized OpenRouter to generate empathetic AI responses.',
     ],
   },
   {
-    name: 'Coding-Classroom',
+    name: 'Coding-Classroom (Collaborative)',
     stack: 'React, Tailwind, Supabase, Docker',
     link: 'https://codingclassroom.vercel.app',
     summary: 'A highly interactive Learning Management System frontend seamlessly integrated with a live coding IDE.',
     impact: [
-      'Designed a pristine, premium glass/minimalist UI using Tailwind CSS.',
-      'Integrated Monaco Editor for a dedicated execution environment supporting Python and JS.',
-      'Built a dual-client architecture for teachers and students with dynamic dashboard routing.',
+      'Designed a dual-client architecture offering dedicated teacher dashboards and student portals with dynamic routing.',
+      'Integrated a fully functional Monaco Editor to provide a robust, browser-based execution environment for Python and JavaScript.',
+      'Used Ollama Cloud Models integration for Learning, Evaluating and Grading of Students.',
     ],
   },
   {
-    name: 'Chippa Motors',
+    name: 'Chippa Motors (Collaborative)',
     stack: 'C#, WinForms, 3-Layer Architecture',
-    summary:
-      'Desktop business application organized around presentation, business logic, and data access layers.',
+    summary: 'A feature-rich desktop application suite comprising a Car Dealership Management System and an interactive Racing Game.',
     impact: [
-      'Separated responsibilities to make the application easier to maintain.',
-      'Implemented database operations behind a clear business-logic layer.',
-      'Designed a practical interface for repeated operational use.',
+      'Built a Dealership Management System with robust CRUD operations for vehicle inventory and customer tracking.',
+      'Developed a 2D Car Simulation for Car Testing featuring real-time collision detection, progressive difficulty, and dynamic score tracking.',
+      'Implemented a 3-Layer Architecture (Presentation, Business Logic, Data Access) and A plethora of Design Patternsto ensure clean code separation and maintainability.',
     ],
   },
   {
-    name: '2D Dungeon Crawler - Penance',
-    stack: 'C++, Raylib',
-    summary:
-      'Real-time 2D game project focused on rendering, collision, movement, and scalable game state handling.',
+    name: 'Penance (Collaborative)',
+    stack: 'C++, Raylib, CMake',
+    summary: 'A real-time 2D dungeon crawler game with a Branching Storyline, showcasing low-level system programming and optimized rendering.',
     impact: [
-      'Implemented player movement, collision detection, and entity interactions.',
-      'Used Raylib to manage rendering and responsive gameplay loops.',
-      'Practiced modular C++ architecture for gameplay systems.',
-    ],
-  },
-  {
-    name: 'Maze Rush',
-    stack: 'Assembly Language',
-    summary:
-      'Low-level maze navigation game demonstrating direct control over memory, registers, and game flow.',
-    impact: [
-      'Applied CPU architecture concepts in an interactive project.',
-      'Handled constrained, performance-conscious game logic.',
-      'Strengthened understanding of low-level program execution.',
+      'Engineered core gameplay mechanics including real-time player movement, combat interactions, and entity management.',
+      'Implemented precise AABB collision detection and scalable game state logic to ensure a seamless gameplay loop.',
+      'Utilized C++ and Raylib to handle memory-efficient graphics rendering, audio playback, and cross-platform compatibility.',
     ],
   },
 ];
@@ -174,7 +161,7 @@ function App() {
           <button className="icon-button" type="button" onClick={() => setDark((value) => !value)} aria-label="Toggle theme">
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-          <motion.a 
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="download-button" href={cvUrl} download>
@@ -190,13 +177,13 @@ function App() {
       <AnimatePresence>
         {menuOpen && (
           <div className="mobile-panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
-            <motion.button 
+            <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="mobile-scrim" type="button" aria-label="Close menu" onClick={closeMenu} 
+              className="mobile-scrim" type="button" aria-label="Close menu" onClick={closeMenu}
             />
-            <motion.div 
+            <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -224,7 +211,7 @@ function App() {
 
       <main id="top">
         <section className="hero section-shell">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
@@ -235,7 +222,7 @@ function App() {
               Software developer specializing in full-stack architecture, modern web technologies, and bridging intelligent systems with scalable backends.
             </motion.p>
             <motion.div variants={fadeInUp} className="hero-actions">
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="primary-action" href={cvUrl} download>
@@ -249,7 +236,7 @@ function App() {
             </motion.div>
           </motion.div>
 
-          <motion.aside 
+          <motion.aside
             initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -276,7 +263,7 @@ function App() {
           </motion.aside>
         </section>
 
-        <motion.section 
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -300,7 +287,7 @@ function App() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -312,9 +299,9 @@ function App() {
           </div>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="skill-layout">
             {skillGroups.map(({ title, icon: Icon, items }, idx) => (
-              <motion.article 
-                variants={fadeInUp} 
-                whileHover={{ y: -8, scale: 1.02 }} 
+              <motion.article
+                variants={fadeInUp}
+                whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="skill-card glass" key={title}>
                 <div className="card-icon">
@@ -331,21 +318,21 @@ function App() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeInUp}
           id="projects" className="section-shell">
           <div className="section-heading">
-            <p className="section-kicker">Selected work</p>
-            <h2>Projects with employer-ready framing</h2>
+            <p className="section-kicker">Projects</p>
+            <h2>Projects</h2>
           </div>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="project-list">
             {projects.map((project, idx) => (
-              <motion.article 
-                variants={fadeInUp} 
-                whileHover={{ y: -8, scale: 1.02 }} 
+              <motion.article
+                variants={fadeInUp}
+                whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="project-card glass" key={project.name}>
                 <div className="project-card-main">
@@ -372,7 +359,7 @@ function App() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -383,24 +370,24 @@ function App() {
             <h2>Academic background</h2>
           </div>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="timeline">
-            <motion.article 
-              variants={fadeInUp} 
+            <motion.article
+              variants={fadeInUp}
               whileHover={{ x: 8 }}
               className="glass">
               <span>2023 - 2027</span>
               <h3>Bachelor of Computer Science</h3>
               <p>FAST-NUCES Lahore - Focused on software engineering, data structures, algorithms, databases, and systems fundamentals.</p>
             </motion.article>
-            <motion.article 
-              variants={fadeInUp} 
+            <motion.article
+              variants={fadeInUp}
               whileHover={{ x: 8 }}
               className="glass">
               <span>2020 - 2022</span>
               <h3>Intermediate Pre-Medical</h3>
               <p>Shalimar College Lahore</p>
             </motion.article>
-            <motion.article 
-              variants={fadeInUp} 
+            <motion.article
+              variants={fadeInUp}
               whileHover={{ x: 8 }}
               className="glass">
               <span>2018 - 2020</span>
@@ -410,7 +397,7 @@ function App() {
           </motion.div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
