@@ -7,7 +7,7 @@ export const profile = {
   title: 'Computer Science Undergraduate',
   location: 'Lahore, Pakistan',
   email: 'abdullahmushtaq445@gmail.com',
-  phone: '+92 302 1047124',
+  phone: '+92 371 0160293',
   github: 'https://github.com/AevitusOmegus',
   linkedin: 'https://www.linkedin.com/in/abdullah-mushtaq-605554378/',
 };
