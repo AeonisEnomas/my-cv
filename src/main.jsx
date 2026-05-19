@@ -69,6 +69,7 @@ const projects = [
   {
     name: 'SENTI-MIND',
     stack: 'React, FastAPI, Supabase, ML/NLP',
+    link: 'https://senti-mind-mocha.vercel.app',
     summary: 'An intelligent AI-powered mental health companion analyzing text to detect emotional states and clinical risks.',
     impact: [
       'Built a full-stack mental health tracking system using React and FastAPI.',
@@ -79,6 +80,7 @@ const projects = [
   {
     name: 'Coding-Classroom',
     stack: 'React, Tailwind, Supabase, Docker',
+    link: 'https://codingclassroom.vercel.app',
     summary: 'A highly interactive Learning Management System frontend seamlessly integrated with a live coding IDE.',
     impact: [
       'Designed a pristine, premium glass/minimalist UI using Tailwind CSS.',
@@ -106,17 +108,6 @@ const projects = [
       'Implemented player movement, collision detection, and entity interactions.',
       'Used Raylib to manage rendering and responsive gameplay loops.',
       'Practiced modular C++ architecture for gameplay systems.',
-    ],
-  },
-  {
-    name: '1v1 Chess Game',
-    stack: 'C++, SFML',
-    summary:
-      'Interactive chess implementation with object-oriented piece behavior and board-state validation.',
-    impact: [
-      'Modeled chess pieces with reusable OOP patterns.',
-      'Implemented move rules and board interaction logic.',
-      'Built a graphical interface using SFML.',
     ],
   },
   {
@@ -360,7 +351,14 @@ function App() {
                 <div className="project-card-main">
                   <div>
                     <p className="project-stack">{project.stack}</p>
-                    <h3>{project.name}</h3>
+                    <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      {project.name}
+                      {project.link && (
+                        <a href={project.link} target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', display: 'inline-flex' }}>
+                          <ArrowUpRight size={18} />
+                        </a>
+                      )}
+                    </h3>
                   </div>
                   <p>{project.summary}</p>
                 </div>
